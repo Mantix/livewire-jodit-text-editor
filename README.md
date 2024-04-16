@@ -13,7 +13,7 @@ A powerful Livewire rich text editor (WYSIWYG) component that build top of Jodit
 > To use this package, you must have [Livewire 3](https://livewire.laravel.com/) installed.
 
 ## 📦 Installation
-You can install the package via Composer:
+Seconds install this package via Composer:
 ```bash
 composer require mantix/livewire-jodit-text-editor
 ```
@@ -26,6 +26,28 @@ Include the Jodit Editor theme and the library in your layout or specific view.
 <!-- Include the Jodit JS Library -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jodit/4.1.16/jodit.min.js"></script>
 ```
+
+Or you can use NPM to install the Jodit Editor directly in your project:
+```bash
+npm install jodit
+```
+
+Import it in your app.js like:
+```javascript
+// Jodit Editor
+import 'jodit/esm/plugins/resizer/resizer'; // Resizer plugin is used when inserting images
+import 'jodit/esm/plugins/video/video'; // Video plugin is used to insert videos
+// Feel free to add extra plugins here...
+import { Jodit } from 'jodit';
+window.Jodit = Jodit;
+```
+
+And in your app.scss like:
+```scss
+// Jodit Editor
+@import 'jodit/es2021/jodit';
+```
+
 For additional information, kindly refer to the [Jodit Editor documentation](https://xdsoft.net/jodit/docs/).
 
 ## 🎬 Showcase

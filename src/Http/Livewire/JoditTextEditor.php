@@ -21,7 +21,7 @@ class JoditTextEditor extends Component {
 
     public function mount(string $theme = 'snow'): void {
         $this->theme = $theme;
-        $this->joditId = 'ql-editor-' . Str::uuid()->toString();
+        $this->joditId = 'jodit-editor-' . Str::uuid()->toString();
     }
 
     public function updatedValue($value): void {
