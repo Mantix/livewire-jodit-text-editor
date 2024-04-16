@@ -1,5 +1,5 @@
 <div wire:ignore>
-    <textarea id="{{ $joditId }}">{!! $wire . get('value') !!}</div>
+    <textarea id="{{ $joditId }}">{!! $value !!}</div>
 </div>
 
 @script
