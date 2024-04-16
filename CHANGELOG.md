@@ -1,5 +1,10 @@
 # Changelog
 
+## V1.2 - 2024-04-16
+
+Added a event listener to update the value.
+Removed the theme option.
+
 ## V1.1 - 2024-04-16
 
 Added a custom toolbar and updated installation instructions.
