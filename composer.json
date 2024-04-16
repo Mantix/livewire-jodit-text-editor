@@ -1,0 +1,56 @@
+{
+  "name": "mantix/livewire-jodit-text-editor",
+  "description": "A powerful Livewire rich text editor (WYSIWYG) component built top of Jodit Editor.",
+  "keywords": [
+    "livewire",
+    "editor",
+    "wysiwyg"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pieter Naber",
+      "email": "Pieter@Mantix.nl",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "livewire/livewire": "^3.0",
+    "spatie/laravel-package-tools": "^1.16"
+  },
+  "require-dev": {
+    "larastan/larastan": "^2.0",
+    "laravel/pint": "^1.13",
+    "orchestra/testbench": "^8.0",
+    "pestphp/pest": "^2.30"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mantix\\LivewireJoditTextEditor\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mantix\\LivewireJoditTextEditor\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "pint": "vendor/bin/pint --dirty",
+    "analyse": "vendor/bin/phpstan analyse"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mantix\\LivewireJoditTextEditor\\LivewireJoditTextEditorServiceProvider"
+      ]
+    }
+  }
+}
