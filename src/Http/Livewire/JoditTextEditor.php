@@ -17,10 +17,7 @@ class JoditTextEditor extends Component {
     #[Locked]
     public string $joditId;
 
-    public string $theme;
-
-    public function mount(string $theme = 'snow'): void {
-        $this->theme = $theme;
+    public function mount(): void {
         $this->joditId = 'jodit-editor-' . Str::uuid()->toString();
     }
 

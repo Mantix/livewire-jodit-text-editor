@@ -40,5 +40,9 @@
         document.getElementById(@js($joditId)).addEventListener('change', function() {
             @this.set('value', this.value);
         });
+
+        window.addEventListener('update-jodit-content', (event) => {
+            editor.value = event.detail[0];
+        });
     </script>
 @endscript
