@@ -21,10 +21,10 @@ composer require mantix/livewire-jodit-text-editor
 Include the Jodit Editor theme and the library in your layout or specific view.
 ```html
 <!-- Include Jodit CSS Styling -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jodit/4.1.16/jodit.min.css">
+<link rel="stylesheet" href="//unpkg.com/jodit@4.1.16/es2021/jodit.min.css">
 
 <!-- Include the Jodit JS Library -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jodit/4.1.16/jodit.min.js"></script>
+<script src="//unpkg.com/jodit@4.1.16/es2021/jodit.min.js"></script>
 ```
 
 Or you can use NPM to install the Jodit Editor directly in your project:
