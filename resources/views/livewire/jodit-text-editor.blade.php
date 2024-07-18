@@ -4,6 +4,8 @@
 
 @script
     <script>
+        const buttons = @json($buttons);
+
         const editor = Jodit.make('#' + @js($joditId), {
             "autofocus": true,
             "uploader": {
@@ -14,28 +16,7 @@
             "showWordsCounter": false,
             "showXPathInStatusbar": false,
             "defaultActionOnPaste": "insert_clear_html",
-            "buttons": [
-                "bold",
-                "italic",
-                "underline",
-                "strikethrough",
-                "|",
-                "left",
-                "ul",
-                "ol",
-                "|",
-                "font",
-                "fontsize",
-                "paragraph",
-                "brush",
-                "|",
-                "link",
-                "image",
-                "video",
-                "|",
-                "undo",
-                "redo"
-            ]
+            "buttons": buttons
         });
         document.getElementById(@js($joditId)).addEventListener('change', function() {
             @this.set('value', this.value);

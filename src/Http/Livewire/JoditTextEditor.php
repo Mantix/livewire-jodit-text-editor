@@ -17,8 +17,35 @@ class JoditTextEditor extends Component {
     #[Locked]
     public string $joditId;
 
-    public function mount(): void {
+    public array $buttons = [
+        'bold',
+        'italic',
+        'underline',
+        'strikethrough',
+        '|',
+        'left',
+        'ul',
+        'ol',
+        '|',
+        'font',
+        'fontsize',
+        'paragraph',
+        'brush',
+        '|',
+        'link',
+        'image',
+        'video',
+        '|',
+        'undo',
+        'redo'
+    ];
+
+    public function mount(array $buttons = []): void {
         $this->joditId = 'jodit-editor-' . Str::uuid()->toString();
+
+        if (!empty($buttons)) {
+            $this->buttons = $buttons;
+        }
     }
 
     public function updatedValue($value): void {

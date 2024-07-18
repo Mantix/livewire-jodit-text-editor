@@ -56,6 +56,11 @@ Now you can use the text editor component as you like.
 <livewire:jodit-text-editor wire:model.live="content" />
 ```
 
+Or add the "buttons" attribute to define buttons dynamically.
+```html
+<livewire:jodit-text-editor wire:model.live="content" :buttons="['bold', 'italic', 'underline', 'strikeThrough', '|', 'left', 'center', 'right', '|', 'link', 'image']" />
+```
+
 ## 🎨 Tailor UI
 The text editor component is entirely customizable. Just publish the view file and make it your own.
 ```bash
