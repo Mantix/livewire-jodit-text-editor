@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.4 - Add sticky toolbar as default - 2024-09-29
+
+Add sticky toolbar as default.
+Also updated dependencies.
+
 ## V1.3 - 2024-07-18
 
 Added the option to add buttons dynamically using a "buttons" attribute.
