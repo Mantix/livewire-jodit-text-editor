@@ -8,6 +8,7 @@
 
         const editor = Jodit.make('#' + @js($joditId), {
             "autofocus": true,
+            "toolbarSticky": true,
             "uploader": {
                 "insertImageAsBase64URI": true
             },
