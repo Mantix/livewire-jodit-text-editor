@@ -17,6 +17,9 @@ class JoditTextEditor extends Component {
     #[Locked]
     public string $joditId;
 
+    #[Locked]
+    public string $identifier = '';
+
     public array $buttons = [
         'bold',
         'italic',
@@ -40,8 +43,9 @@ class JoditTextEditor extends Component {
         'redo'
     ];
 
-    public function mount(array $buttons = []): void {
+    public function mount(?string $identifier = null, array $buttons = []): void {
         $this->joditId = 'jodit-editor-' . Str::uuid()->toString();
+        $this->identifier = $identifier ?: $this->joditId;
 
         if (!empty($buttons)) {
             $this->buttons = $buttons;

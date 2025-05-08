@@ -19,12 +19,24 @@
             "defaultActionOnPaste": "insert_clear_html",
             "buttons": buttons
         });
+
         document.getElementById(@js($joditId)).addEventListener('change', function() {
             @this.set('value', this.value);
         });
 
         window.addEventListener('update-jodit-content', (event) => {
-            editor.value = event.detail[0];
+            // Check if this is an array with [editorId, content]
+            if (Array.isArray(event.detail) && event.detail.length === 2) {
+                const [targetId, newContent] = event.detail;
+
+                // Only update if the editor ID matches this instance
+                if (targetId === @js($identifier)) {
+                    editor.value = newContent;
+                }
+            } else {
+                // Original behavior: update all editors (backward compatibility)
+                editor.value = event.detail;
+            }
         });
     </script>
 @endscript
