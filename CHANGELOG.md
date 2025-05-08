@@ -2,12 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## V1.5 - 2025-05-08
-
-1. Support for targeting specific editors with the identifier parameter
-2. Enhanced update-jodit-content event with selective editor targeting
-3. Backward compatibility for existing implementations
-
 ## v1.5.0 - 2025-05-08
 
 ### Added
