@@ -35,7 +35,7 @@
                 }
             } else {
                 // Original behavior: update all editors (backward compatibility)
-                editor.value = event.detail;
+                editor.value = event.detail[0];
             }
         });
     </script>
