@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## V1.6 - 2025-05-09
+
+Fix: correct event detail handling in Jodit editor update.
+
 ## v1.5.0 - 2025-05-08
 
 ### Added
