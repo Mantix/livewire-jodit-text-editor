@@ -17,7 +17,8 @@
             "showWordsCounter": false,
             "showXPathInStatusbar": false,
             "defaultActionOnPaste": "insert_clear_html",
-            "buttons": buttons
+            "buttons": buttons,
+            "theme": "{{ $theme }}"
         });
 
         document.getElementById(@js($joditId)).addEventListener('change', function() {

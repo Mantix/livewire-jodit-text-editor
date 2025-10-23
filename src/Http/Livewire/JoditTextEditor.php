@@ -43,13 +43,17 @@ class JoditTextEditor extends Component {
         'redo'
     ];
 
-    public function mount(?string $identifier = null, array $buttons = []): void {
+    public string $theme;
+
+    public function mount(?string $identifier = null, array $buttons = [], ?string $theme = 'light'): void {
         $this->joditId = 'jodit-editor-' . Str::uuid()->toString();
         $this->identifier = $identifier ?: $this->joditId;
 
         if (!empty($buttons)) {
             $this->buttons = $buttons;
         }
+
+        $this->theme = $theme;
     }
 
     public function updatedValue($value): void {
