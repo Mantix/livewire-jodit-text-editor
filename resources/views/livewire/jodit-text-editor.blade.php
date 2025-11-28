@@ -27,8 +27,8 @@
 
         window.addEventListener('update-jodit-content', (event) => {
             // Check if this is an array with [editorId, content]
-            if (Array.isArray(event.detail) && event.detail.length === 2) {
-                const [targetId, newContent] = event.detail;
+            if (Array.isArray(event.detail[0]) && event.detail[0].length === 2) {
+                const [targetId, newContent] = event.detail[0];
 
                 // Only update if the editor ID matches this instance
                 if (targetId === @js($identifier)) {
