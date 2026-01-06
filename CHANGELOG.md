@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8  - 2026-01-06
+
+Fixed handling multiple editor when updating Jodit content.
+
+Thanks to @cakmalik
+
 ## V1.7 - 2025-10-27
 
 Added support for a Jodit theme, thanks to @thsteinmetz
