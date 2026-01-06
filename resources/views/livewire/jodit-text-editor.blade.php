@@ -25,17 +25,21 @@
         });
 
         window.addEventListener('update-jodit-content', (event) => {
-            // Check if this is an array with [editorId, content]
-            if (Array.isArray(event.detail) && event.detail.length === 2) {
-                const [targetId, newContent] = event.detail;
+            if (Array.isArray(event.detail) && event.detail.length > 0) {
+                // Check if this is an array with [editorId, content]
+                if (Array.isArray(event.detail[0]) && event.detail[0].length === 2) {
+                    const [targetId, newContent] = event.detail[0];
 
-                // Only update if the editor ID matches this instance
-                if (targetId === @js($identifier)) {
-                    editor.value = newContent;
+                    // Only update if the editor ID matches this instance
+                    if (targetId === @js($identifier)) {
+                        editor.value = newContent;
+                    }
+                } else {
+                    // Original behavior: update all editors (backward compatibility)
+                    editor.value = event.detail[0];
                 }
             } else {
-                // Original behavior: update all editors (backward compatibility)
-                editor.value = event.detail[0];
+                console.warn('Invalid event detail format:', event.detail);
             }
         });
     </script>
