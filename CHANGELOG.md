@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.9  - 2026-01-22
+
+### Added
+
+- Support for Livewire 4 alongside Livewire 3
+- Updated composer.json to allow both `^3.0` and `^4.0` versions of Livewire
+
 ## v1.8  - 2026-01-06
 
 Fixed handling multiple editor when updating Jodit content.
