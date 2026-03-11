@@ -4,6 +4,9 @@
 
 @script
     <script>
+        const textAreaElement = document.getElementById(@js($joditId));
+        textAreaElement.parentNode.querySelectorAll('.jodit').forEach(el => el.remove());
+
         const buttons = @json($buttons);
 
         const editor = Jodit.make('#' + @js($joditId), {
@@ -21,7 +24,7 @@
             "theme": "{{ $theme }}"
         });
 
-        document.getElementById(@js($joditId)).addEventListener('change', function() {
+        textAreaElement.addEventListener('change', function() {
             @this.set('value', this.value);
         });
 
