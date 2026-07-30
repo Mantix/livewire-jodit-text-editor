@@ -19,6 +19,7 @@ class JoditTextEditor extends Component {
 
     #[Locked]
     public string $identifier = '';
+    public array $options = [];
 
     public array $buttons = [
         'bold',
@@ -45,7 +46,7 @@ class JoditTextEditor extends Component {
 
     public string $theme;
 
-    public function mount(?string $identifier = null, array $buttons = [], ?string $theme = 'light'): void {
+    public function mount(?string $identifier = null, array $buttons = [], ?string $theme = 'light', array $options = []): void {
         $this->joditId = 'jodit-editor-' . Str::uuid()->toString();
         $this->identifier = $identifier ?: $this->joditId;
 
@@ -54,6 +55,7 @@ class JoditTextEditor extends Component {
         }
 
         $this->theme = $theme;
+        $this->options = $options;
     }
 
     public function updatedValue($value): void {
