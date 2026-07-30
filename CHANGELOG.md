@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.10  - 2026-07-30
+
+### Added
+
+- Support for custom options to text Editor
+- Fixed duplicates due to wire:ignore #issue 12
+
 ## v1.9  - 2026-01-22
 
 ### Added
